@@ -11,6 +11,7 @@ POST /todo
 BODY title, completed?, dueDate?, userId
 
 UPDATE TODO BY ID
+/todo
 
 DELETE TODO BY ID
 
