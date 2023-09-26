@@ -8,7 +8,12 @@ BODY username, password
 
 CREATE TODO
 POST /todo
-BODY title, completed?, dueDate?, userId
+AUTHORIHEADERZATION BEARER ACCESS_TOKEN
+BODY title, completed?, dueDate?
+RESPONSE
+200 MESSAGE
+400, 401 MESSAGE
+500 MESSAGE
 
 UPDATE TODO BY ID
 /todo
