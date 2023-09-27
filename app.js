@@ -1,5 +1,6 @@
 require('dotenv').config();
 const express = require('express');
+const cors = require('cors');
 
 const notFoundMiddleware = require('./middlewares/not-found');
 const errorMiddleware = require('./middlewares/error');
@@ -8,6 +9,7 @@ const todoRoute = require('./routes/todo-route');
 
 const app = express();
 
+app.use(cors({ origin: 'http://127.0.0.1:5173' }));
 app.use(express.json());
 
 app.use('/auth', authRoute);
